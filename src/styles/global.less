@@ -1,0 +1,14 @@
+@import "./var.less";  //引入全局颜色
+a{
+    text-decoration: none; //取消默认的文本装饰
+    color:inherit;   //继承父元素的属性
+    &:hover{        //鼠标移上去的效果
+        color: @primary;  //使用全局颜色变量
+    }
+}
+
+body{
+    overflow: hidden;
+    margin: 0px;
+}
+
