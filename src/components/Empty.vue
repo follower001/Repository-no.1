@@ -1,7 +1,9 @@
+// 这是一个空白组件、当页面无数据时展示。
 <template>
   <div class="empty-container">
       <Icon type="icon-empty" />
-      <p>{{text}}</p>
+      <!-- 这里也可以之间显示传递过来的属性值 -->
+      <p>{{text}}</p> 
   </div>
 </template>
 

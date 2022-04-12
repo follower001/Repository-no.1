@@ -1,3 +1,4 @@
+//这是一个图片加载组件
 <template>
   
 </template>
