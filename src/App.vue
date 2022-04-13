@@ -4,22 +4,31 @@
   :size="50" /> -->
   <!-- <Icon type="icon-home" /> -->
   <!-- <Pager :current="current" :total="total"  @changeCurrentPage="changePage" /> -->
-  <Empty text="啥也没有" />
+  <!-- <Empty text="啥也没有" /> -->
+  <!-- <ImageLoader src="https://img2.baidu.com/it/u=2651516248,1893985744&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"
+    placeHolder="https://img2.baidu.com/it/u=3054625082,925648916&fm=253&fmt=auto&app=138&f=JPEG?w=767&h=500" 
+    @load="handleLoaded" 
+    :duration="3000" /> -->
+    <Contact />
   </div>
 </template>
 
 <script>
-import Avatar from "./components/Avatar.vue"
-import Icon from "./components/Icon.vue"
-import Pager from "./components/Pager.vue"
-import Empty from "./components/Empty.vue"
+// import Avatar from "./components/Avatar.vue"
+// import Icon from "./components/Icon.vue"
+// import Pager from "./components/Pager.vue"
+// import Empty from "./components/Empty.vue"
+// import ImageLoader from "./components/ImageLoader.vue"
+import Contact from "./components/Contact.vue"
 export default {
   name:"App",
     components:{
-      Avatar,
-      Icon,
-      Pager,
-      Empty,
+      // Avatar,
+      // Icon,
+      // Pager,
+      // Empty,
+      // ImageLoader,
+      Contact,
     },
     data(){
       return {
@@ -28,9 +37,12 @@ export default {
       }
     },
     methods:{
-      changePage(newPage){
+      changePage(newPage){    //分页组件处理点击事件
         console.log("更改页码");
           this.current = newPage;
+      },
+      handleLoaded(){
+          console.log("图片加载完成！")
       }
     }
 }
@@ -39,9 +51,11 @@ export default {
 <style>
 .test-container{
   position: relative;
-  width:500px;
+  width:400px;
   height:400px;
   border: 1px solid;
   margin: 0 auto;
+  padding-top: 200px;
+  background: #000;
 }
 </style>

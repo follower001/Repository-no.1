@@ -15,8 +15,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 /* 首先导入矢量库的代码 */
 @import "//at.alicdn.com/t/font_3273192_l5nggblpqjc.css";
+.iconfont{
+    color:inherit;   
+    font-size: inherit;    //这里采用继承父元素的方式、后面更好去控制图标的样式
+}
 
 </style>
