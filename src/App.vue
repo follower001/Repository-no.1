@@ -9,7 +9,8 @@
     placeHolder="https://img2.baidu.com/it/u=3054625082,925648916&fm=253&fmt=auto&app=138&f=JPEG?w=767&h=500" 
     @load="handleLoaded" 
     :duration="3000" /> -->
-    <Contact />
+    <!-- <Contact /> -->
+    <Menu />
   </div>
 </template>
 
@@ -19,7 +20,8 @@
 // import Pager from "./components/Pager.vue"
 // import Empty from "./components/Empty.vue"
 // import ImageLoader from "./components/ImageLoader.vue"
-import Contact from "./components/Contact.vue"
+// import Contact from "./components/Contact.vue"
+import Menu from "./components/Menu.vue"
 export default {
   name:"App",
     components:{
@@ -28,7 +30,8 @@ export default {
       // Pager,
       // Empty,
       // ImageLoader,
-      Contact,
+      // Contact,
+      Menu,
     },
     data(){
       return {
@@ -49,7 +52,7 @@ export default {
 </script>
 
 <style>
-.test-container{
+/* .test-container{
   position: relative;
   width:400px;
   height:400px;
@@ -57,5 +60,12 @@ export default {
   margin: 0 auto;
   padding-top: 200px;
   background: #000;
+} */
+.test-container{
+  width: 400px;
+  height: 600px;
+  border: 2px solid red;
+  background: #000;
+  margin: 0 auto;
 }
 </style>

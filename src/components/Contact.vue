@@ -3,7 +3,6 @@
   <ul class="contact-container">
       <li>
           <a href="">
-              <!-- 这里用div包含icon 主要是为了方便控制icon样式 -->
               <div class="icon">
                   <Icon type="icon-QQ" />
               </div>
@@ -68,13 +67,28 @@ export default {
     a{
         display: flex;  //设置弹性盒子、使内容元素并排
         align-items: center;   //纵向居中对齐这里面的各项元素
+        cursor: pointer;  
     }
     li{
-        cursor: pointer;
         height: 30px;
         line-height: 30px;
         margin:14px 0;
         position: relative;
+        // @keyframes appear {
+        //     from{
+        //         transform: scaleY(0);
+        //     }
+        //     to{
+        //         transform: scaleY(1);
+        //     }
+        // }
+        &:hover{
+            .pop{
+            //    animation: appear 0.5s forwards;  //这里的动画过渡效果可以用keyframes  也可以之间使用transition。
+            transform: scaleY(1);
+            transition: 0.3s;
+            }
+        }
     }
     .icon{
        font-size: 26px;  //设置图标大小
@@ -85,13 +99,12 @@ export default {
         height: 150px;
         position: absolute;
         left: 0;
-        bottom: 25px;
+        bottom: 30px;
         border-radius: 5px;
         padding: 10px 15px;
         background: #fff;
-        &.hover{
-            animation: appear 1s;
-        }
+        transform: scaleY(0);
+        transform-origin: center bottom; //设置变形原点、横向在中间、纵向在下面
         &::after{   //利用伪元素制作小三角
             content: "";
             position: absolute;
@@ -99,23 +112,15 @@ export default {
             transform: translate(-50%) rotate(45deg);
             width: 8px;
             height: 8px;
-            bottom:6px;
+            bottom:-4px;
             background: #fff;
         }
         img{
             width: 100%;
             height: 100%;
         }
-        @keyframes appear {
-                from{
-                    opacity: 0;
-                    transform: rotate(90deg);
-                }
-                to{
-                    opacity: 1;
-                    transform: rotate(0);
-                }
-        }
+        
+        
     }
 }
 </style>
