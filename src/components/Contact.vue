@@ -62,7 +62,7 @@ export default {
 .contact-container{
     color: @gray;
     list-style: none;
-    padding: 20px;
+    padding: 20px 40px;
     margin: 0;
     a{
         display: flex;  //设置弹性盒子、使内容元素并排
@@ -113,7 +113,7 @@ export default {
             width: 8px;
             height: 8px;
             bottom:-4px;
-            background: #fff;
+            background: rgb(255, 255, 255);
         }
         img{
             width: 100%;

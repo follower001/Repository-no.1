@@ -10,7 +10,8 @@
     @load="handleLoaded" 
     :duration="3000" /> -->
     <!-- <Contact /> -->
-    <Menu />
+    <!-- <Menu /> -->
+    <SiteAside />
   </div>
 </template>
 
@@ -21,7 +22,8 @@
 // import Empty from "./components/Empty.vue"
 // import ImageLoader from "./components/ImageLoader.vue"
 // import Contact from "./components/Contact.vue"
-import Menu from "./components/Menu.vue"
+// import Menu from "./components/Menu.vue"
+import SiteAside from "./components/SiteAside.vue"
 export default {
   name:"App",
     components:{
@@ -31,7 +33,9 @@ export default {
       // Empty,
       // ImageLoader,
       // Contact,
-      Menu,
+      // Menu,
+      SiteAside,
+
     },
     data(){
       return {
@@ -65,7 +69,7 @@ export default {
   width: 400px;
   height: 600px;
   border: 2px solid red;
-  background: #000;
+  /* background: #000; */
   margin: 0 auto;
 }
 </style>

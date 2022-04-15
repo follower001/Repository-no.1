@@ -1,3 +1,4 @@
+// 这是一个菜单组件
 <template>
   <nav class="menu-container">
       <a :href="item.link"  v-for="item in items" :key="item.id" :class="{selected : isSelected(item)}" >
@@ -70,7 +71,6 @@ export default {
 @import "//at.alicdn.com/t/font_3273192_l5nggblpqjc.css";
 .menu-container{
     color: @gray;
-    margin: 24px 0;
     a{
         display: block;
         padding: 0 50px;
