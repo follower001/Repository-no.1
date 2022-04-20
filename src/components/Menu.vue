@@ -73,7 +73,7 @@ export default {
     color: @gray;
     a{
         display: block;
-        padding: 0 50px;
+        padding: 0 40px;
         display: flex;
         align-items: center;
         height: 45px;

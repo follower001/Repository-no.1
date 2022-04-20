@@ -1,17 +1,15 @@
 <template>
   <div class="test-container" id="app">
-  <!-- <Avatar url="https://img1.baidu.com/it/u=1147217842,409372213&fm=253&fmt=auto&app=138&f=JPEG?w=510&h=340" 
-  :size="50" /> -->
-  <!-- <Icon type="icon-home" /> -->
-  <!-- <Pager :current="current" :total="total"  @changeCurrentPage="changePage" /> -->
-  <!-- <Empty text="啥也没有" /> -->
-  <!-- <ImageLoader src="https://img2.baidu.com/it/u=2651516248,1893985744&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"
-    placeHolder="https://img2.baidu.com/it/u=3054625082,925648916&fm=253&fmt=auto&app=138&f=JPEG?w=767&h=500" 
-    @load="handleLoaded" 
-    :duration="3000" /> -->
-    <!-- <Contact /> -->
-    <!-- <Menu /> -->
-    <SiteAside />
+    <Layout>
+      <template #left>
+          <div class="aside">
+             <SiteAside />
+          </div>
+      </template>
+      <template #default>
+        主区域
+      </template>
+    </Layout>
   </div>
 </template>
 
@@ -24,6 +22,7 @@
 // import Contact from "./components/Contact.vue"
 // import Menu from "./components/Menu.vue"
 import SiteAside from "./components/SiteAside.vue"
+import Layout from "./components/Layout.vue"
 export default {
   name:"App",
     components:{
@@ -35,6 +34,7 @@ export default {
       // Contact,
       // Menu,
       SiteAside,
+      Layout,
 
     },
     data(){
@@ -55,21 +55,14 @@ export default {
 }
 </script>
 
-<style>
-/* .test-container{
-  position: relative;
-  width:400px;
-  height:400px;
-  border: 1px solid;
-  margin: 0 auto;
-  padding-top: 200px;
-  background: #000;
-} */
+<style lang="less" scoped>
+@import "~@/styles/mixin.less";
 .test-container{
-  width: 400px;
-  height: 600px;
-  border: 2px solid red;
-  /* background: #000; */
-  margin: 0 auto;
+ .self-fill(fixed);
+  }
+ .aside{
+   width: 250px;
+   height: 100%;
 }
+
 </style>
