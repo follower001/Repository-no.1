@@ -5,6 +5,7 @@ import router from "./router"
 import showMessage from './Utils/showMessage'
 window.showMessage = showMessage;
 
+showMessage("hello");
 const vm = new Vue({
   router,
   render: h => h(App),
